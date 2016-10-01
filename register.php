@@ -2,9 +2,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Untitled Document</title>
+<title>Register Here</title>
+<link rel="stylesheet" type="text/css" href='index_style.css'>
+
 </head>
 
 <body>
+
+	<h1>Register Below</h1>
+
 </body>
 </html>

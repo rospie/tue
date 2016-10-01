@@ -8,8 +8,8 @@
 
 <body>
 
-<h1>Please login or register</h1>
-<a href="login.php">Login</a> or
-<a href="register.php">Register</a>
+	<h1>Please login or register</h1>
+		<a href="login.php">Login</a> or
+		<a href="register.php">Register</a>
 </body>
 </html>
