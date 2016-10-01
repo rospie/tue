@@ -10,7 +10,11 @@
 <body>
 
 	<h1>Login Below</h1>
-    <form action="login.php"></form>
+    <form action="login.php" method="post"></form>
+    	<input type="text" placeholder="Enter your email here" name="email">
+    	<input type="password" placeholder="and your password" name="password">
+        
+        <input type="submit">
 
 </body>
 </html>

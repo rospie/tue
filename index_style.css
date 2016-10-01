@@ -1,3 +1,14 @@
 @charset "UTF-8";
 /* CSS Document */
 
+body {
+	}
+input[type="text"], input [type="password"] {
+	outline:none;
+	padding:10%;
+	display:block;
+	width: 300px;
+	border-radius: 3px;
+	border:solid 1px #BD3C3E;
+	margin:auto 20px;
+	}
