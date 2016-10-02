@@ -36,3 +36,6 @@ input[type="password"] {
 		border-radius:3px;
 		cursor:pointer;
 		}
+	input[type="submit"]:hover{
+		background:#445984;
+		}
