@@ -10,6 +10,8 @@
 <body>
 
 	<h1>Register Below</h1>
+        <span>or if already registered <a href="login.php">login here</a></span>
+
 
 </body>
 </html>

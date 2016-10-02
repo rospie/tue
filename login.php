@@ -9,9 +9,12 @@
 
 <body>
 	<div class="header">
-		<a href="/">Back to the Main page</a>
+		<a href="index.php">Back to the Main page</a>
 	</div>
+    
 	<h1>Login Below</h1>
+    <span>or <a href="register.php">register here</a></span>
+    
     <form action="login.php" method="post"></form>
     	<input type="text" placeholder="Enter your email here" name="email">
     	<input type="password" placeholder="and your password" name="password">
