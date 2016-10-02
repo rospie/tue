@@ -7,9 +7,20 @@
 </head>
 
 <body>
+        
+        <?php if( !empty($user) ): ?>
 
-	<h1>Please login or register</h1>
+		<br />Welcome <?= $user['email']; ?> 
+		<br /><br />You are successfully logged in!
+		<br /><br />
+		<a href="logout.php">Logout?</a>
+
+	<?php else: ?>
+
+		<h1>Please Login or Register</h1>
 		<a href="login.php">Login</a> or
 		<a href="register.php">Register</a>
+
+	<?php endif; ?>
 </body>
 </html>
