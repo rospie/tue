@@ -1,19 +1,22 @@
 <?php
 
-$server = 'localhost';
-$username ='root';
-$password ='root';
-$database ='LoginForm';
-
-try {
-	$conn = new PDO("mysql:host=$server;dbname=$database;", $username, $password);
-}	catch(PDOException $e){
-	die ("Connection failed: " . $e->getMessage());
-}
+require 'database.php';
 
 if(!empty($_POST['email']) && !empty($_POST['password'])):
 	
 	//enter a new user into the databse
+	$sql = "INSTERT INTO users (email,password) VALUES (:email,:password)";
+	$stmt = $conn->prepare($sql);
+	
+	$stmt->bindParam(':email', $_POST['email']);
+	$stmt->bindParam(':password', password_hash($_POST['password'], PASSWORD_BCRYPT));
+	
+	if( stmt->execute() ):
+		die('Welcome aboard!');
+	else:
+		die('Something is wrong');
+	endif;
+	
 endif;
 ?>
 
