@@ -1,20 +1,29 @@
 <?php
 
-require 'database.php';
+$server = 'emmede.com.mysql';
+$username ='emmede_com';
+$password ='AZXtFgRR';
+$database ='emmede_com';
+
+try {
+	$connection = new PDO("mysql:host=$server;dbname=$database;", $username, $password);
+}	catch(PDOException $e){
+	die ("Connection failed: " . $e->getMessage());
+}
 
 if(!empty($_POST['email']) && !empty($_POST['password'])):
 	
 	//enter a new user into the databse
-	$sql = "INSTERT INTO users (email,password) VALUES (:email,:password)";
-	$stmt = $conn->prepare($sql);
+	$sql = "INSTERT INTO users (email, password) VALUES (:email, :password)";
+	$stmt = $connection->prepare($sql);
 	
 	$stmt->bindParam(':email', $_POST['email']);
 	$stmt->bindParam(':password', password_hash($_POST['password'], PASSWORD_BCRYPT));
 	
-	if( stmt->execute() ):
-		die('Welcome aboard!');
+	if( $stmt->execute() ):
+		$message = 'Welcome aboard!';
 	else:
-		die('Something is wrong');
+		$message = 'Something went wrong :(';
 	endif;
 	
 endif;
